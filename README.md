@@ -8,8 +8,7 @@ Community-shareable themes for the [Hermes Agent](https://github.com/NousResearc
 
 A dark glass dashboard theme with cyan glow, rounded panels, subtle grid texture, and AI-product-dashboard vibes.
 
-![Aura AI dashboard overview](assets/screenshots/aura-ai/overview.png)
-![Aura AI floating chat](assets/screenshots/aura-ai/floating-chat.png)
+![Aura AI dashboard screenshot](assets/screenshots/aura-ai/overview.png)
 
 ## Installation
 
