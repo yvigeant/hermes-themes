@@ -1,0 +1,141 @@
+name: aura-ai
+label: Aura AI
+description: Ethereal intelligence — black glass, cyan glow, and soft neural surfaces
+  for the Hermes Agent dashboard.
+palette:
+  background:
+    hex: '#08090b'
+    alpha: 1
+  midground:
+    hex: '#28d6ff'
+    alpha: 1
+  foreground:
+    hex: '#ffffff'
+    alpha: 0.1
+  warmGlow: rgba(40, 214, 255, 0.34)
+  noiseOpacity: 0.72
+typography:
+  fontSans: Inter, Space Grotesk, system-ui, -apple-system, "Segoe UI", sans-serif
+  fontMono: JetBrains Mono, ui-monospace, "SF Mono", Menlo, Consolas, monospace
+  fontDisplay: Space Grotesk, Inter, system-ui, sans-serif
+  fontUrl: https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap
+  baseSize: 16px
+  lineHeight: '1.58'
+  letterSpacing: -0.006em
+layout:
+  radius: 1.05rem
+  density: comfortable
+terminalBackground: '#0b0c0f'
+colorOverrides:
+  card: '#19191c'
+  cardForeground: '#f6f8fb'
+  popover: '#17181b'
+  popoverForeground: '#f6f8fb'
+  primary: '#28d6ff'
+  primaryForeground: '#061017'
+  secondary: '#202126'
+  secondaryForeground: '#eef7ff'
+  muted: '#17181b'
+  mutedForeground: '#aeb4c0'
+  accent: '#1fc7f3'
+  accentForeground: '#061017'
+  success: '#2acb70'
+  warning: '#54bfff'
+  destructive: '#ff4f8b'
+  destructiveForeground: '#ffffff'
+  border: '#2a2c33'
+  input: '#30323a'
+  ring: '#28d6ff'
+seriesColors:
+  inputTokenAccent: '#59c7ff'
+  outputTokenAccent: '#22f0ff'
+swatchColors:
+- '#08090b'
+- '#28d6ff'
+- '#1f2026'
+componentStyles:
+  backdrop:
+    fillerOpacity: '0.018'
+    bgBlendMode: normal
+    fillerBlendMode: screen
+  card:
+    boxShadow: 0 24px 80px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255,255,255,0.045)
+  sidebar:
+    background: linear-gradient(180deg, rgba(9,10,12,0.98), rgba(10,11,13,0.94))
+  badge:
+    letterSpacing: 0.12em
+customCSS: ":root {\n  --aura-bg: #08090b;\n  --aura-panel: #18181b;\n  --aura-panel-2:\
+  \ #202126;\n  --aura-cyan: #28d6ff;\n  --aura-cyan-soft: #58c7ff;\n  --aura-text:\
+  \ #f7f8fb;\n  --aura-muted: #aeb4c0;\n  --aura-glow: 0 0 24px rgba(40, 214, 255,\
+  \ 0.24), 0 0 60px rgba(40, 214, 255, 0.12);\n}\n\nbody {\n  background: #08090b;\n\
+  }\n\n#root::before {\n  content: \"\";\n  position: fixed;\n  inset: 0;\n  pointer-events:\
+  \ none;\n  z-index: 0;\n  background:\n    radial-gradient(circle at 78% 18%, rgba(40,214,255,0.11),\
+  \ transparent 24rem),\n    radial-gradient(circle at 88% 46%, rgba(145,63,170,0.10),\
+  \ transparent 22rem),\n    radial-gradient(circle at 30% 8%, rgba(40,214,255,0.08),\
+  \ transparent 18rem),\n    linear-gradient(90deg, rgba(255,255,255,0.028) 1px, transparent\
+  \ 1px),\n    linear-gradient(180deg, rgba(255,255,255,0.020) 1px, transparent 1px);\n\
+  \  background-size: auto, auto, auto, 80px 80px, 80px 80px;\n  opacity: 0.9;\n \
+  \ mix-blend-mode: screen;\n}\n\n#root::after {\n  content: \"\";\n  position: fixed;\n\
+  \  inset: 0;\n  pointer-events: none;\n  z-index: 1;\n  background: linear-gradient(180deg,\
+  \ rgba(255,255,255,0.018), transparent 10rem), repeating-linear-gradient(180deg,\
+  \ rgba(255,255,255,0.016) 0 1px, transparent 1px 6px);\n  opacity: 0.22;\n}\n\n\
+  aside[aria-label=\"Navigation\"],\nnav[aria-label=\"Navigation\"] {\n  background:\
+  \ linear-gradient(180deg, rgba(8,9,11,0.98), rgba(11,12,15,0.94)) !important;\n\
+  \  border-right: 1px solid rgba(255,255,255,0.055) !important;\n  box-shadow: 24px\
+  \ 0 80px rgba(0,0,0,0.38);\n}\n\nheader,\n[role=\"banner\"] {\n  background: rgba(8,\
+  \ 9, 11, 0.74) !important;\n  border-bottom: 1px solid rgba(255,255,255,0.045) !important;\n\
+  \  backdrop-filter: blur(18px) saturate(1.12);\n}\n\nmain {\n  position: relative;\n\
+  \  z-index: 2;\n}\n\n.bg-card,\n.bg-popover,\n.bg-muted,\nsection,\narticle {\n\
+  \  border-color: rgba(255,255,255,0.06) !important;\n}\n\n.bg-card,\n.bg-popover,\n\
+  [class*=\"bg-card\"],\n[class*=\"bg-muted\"] {\n  background-image: linear-gradient(135deg,\
+  \ rgba(255,255,255,0.050), rgba(255,255,255,0.018)) !important;\n  box-shadow: 0\
+  \ 24px 70px rgba(0,0,0,0.34), inset 0 1px 0 rgba(255,255,255,0.045);\n}\n\nbutton,\n\
+  a,\n[role=\"tab\"],\n[role=\"radio\"] {\n  transition: color 160ms ease, background\
+  \ 160ms ease, border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;\n\
+  }\n\nbutton:hover,\na:hover,\n[role=\"tab\"]:hover,\n[role=\"radio\"]:hover {\n\
+  \  border-color: rgba(40,214,255,0.50) !important;\n  box-shadow: 0 0 0 1px rgba(40,214,255,0.22),\
+  \ 0 10px 34px rgba(40,214,255,0.10);\n}\n\nbutton:focus-visible,\na:focus-visible,\n\
+  input:focus-visible,\ntextarea:focus-visible,\n[role=\"tab\"]:focus-visible,\n[role=\"\
+  radio\"]:focus-visible {\n  outline: 2px solid rgba(40,214,255,0.85) !important;\n\
+  \  outline-offset: 2px;\n  box-shadow: var(--aura-glow);\n}\n\n.text-primary,\n\
+  [class*=\"text-primary\"],\n[aria-current=\"page\"],\n[data-active=\"true\"] {\n\
+  \  color: var(--aura-cyan) !important;\n  text-shadow: 0 0 18px rgba(40,214,255,0.24);\n\
+  }\n\n.bg-primary,\n[class*=\"bg-primary\"] {\n  background: linear-gradient(135deg,\
+  \ #55c4ff, #18dfff) !important;\n  color: #061017 !important;\n  box-shadow: 0 16px\
+  \ 45px rgba(40,214,255,0.25), inset 0 1px 0 rgba(255,255,255,0.28);\n}\n\ninput,\n\
+  textarea,\n[role=\"searchbox\"],\n.xterm-screen {\n  background-color: rgba(18,19,22,0.92)\
+  \ !important;\n  border-color: rgba(255,255,255,0.07) !important;\n}\n\nh1, h2,\
+  \ h3, .font-display {\n  font-family: var(--theme-font-display);\n  letter-spacing:\
+  \ 0.025em;\n}\n\nh1, h2 {\n  color: #f7f8fb;\n  text-shadow: 0 0 24px rgba(40,214,255,0.12);\n\
+  }\n\nsmall,\ncode,\nkbd,\n.font-mono,\n.font-mono-ui {\n  letter-spacing: 0.08em;\n\
+  }\n\n/* Aura AI polish: softer glass panels instead of terminal wireframes. */\n\
+  .border,\n.border-border,\n[class*=\"border-border\"],\n[class*=\"border-primary\"\
+  ],\n[class*=\"border-accent\"] {\n  border-color: rgba(255,255,255,0.065) !important;\n\
+  }\n\n.bg-card,\n.bg-popover,\n.bg-muted,\n[class*=\"bg-card\"],\n[class*=\"bg-popover\"\
+  ],\n[class*=\"bg-muted\"],\nmain section,\nmain article {\n  border-radius: 1.05rem\
+  \ !important;\n  background-color: rgba(24,24,27,0.84) !important;\n  background-image:\
+  \ linear-gradient(135deg, rgba(255,255,255,0.055), rgba(255,255,255,0.018)) !important;\n\
+  \  backdrop-filter: blur(18px) saturate(1.08);\n}\n\n/* Keep floating chat geometry\
+  \ untouched. Fixed-position chat content lives\n   under main; broad glass/backdrop\
+  \ selectors create a containing block and\n   offset the bubble body from its header.\
+  \ */\n[data-floating-chat=\"true\"],\n[data-floating-chat=\"true\"] > div,\n[data-floating-chat=\"\
+  true\"] .lg\\:flex-row,\n[data-floating-chat=\"true\"] .hermes-chat-xterm-host,\n\
+  [data-floating-chat=\"true\"] .xterm,\n[data-floating-chat=\"true\"] .xterm-viewport,\n\
+  [data-floating-chat=\"true\"] .xterm-screen {\n  backdrop-filter: none !important;\n\
+  }\n\naside[aria-label=\"Navigation\"] a,\nnav[aria-label=\"Navigation\"] a,\naside[aria-label=\"\
+  Navigation\"] button,\nnav[aria-label=\"Navigation\"] button {\n  border-radius:\
+  \ 0.95rem !important;\n  font-family: var(--theme-font-sans) !important;\n  letter-spacing:\
+  \ 0.01em !important;\n  text-transform: none !important;\n}\n\naside[aria-label=\"\
+  Navigation\"] a:hover,\nnav[aria-label=\"Navigation\"] a:hover,\naside[aria-label=\"\
+  Navigation\"] a[aria-current=\"page\"],\nnav[aria-label=\"Navigation\"] a[aria-current=\"\
+  page\"] {\n  background: rgba(31,199,243,0.10) !important;\n  box-shadow: inset\
+  \ 3px 0 0 rgba(40,214,255,0.95), 0 0 26px rgba(40,214,255,0.10) !important;\n}\n\
+  \nh1, h2, h3,\n[class*=\"tracking\"],\n[class*=\"uppercase\"] {\n  font-family:\
+  \ var(--theme-font-display) !important;\n}\n\nh1, h2 {\n  letter-spacing: 0.02em\
+  \ !important;\n}\n\nh3,\n[class*=\"uppercase\"] {\n  letter-spacing: 0.14em !important;\n\
+  }\n\nbutton:not([aria-label=\"Collapse\"]),\n[role=\"button\"],\n[role=\"radio\"\
+  ],\ninput,\ntextarea {\n  border-radius: 999px !important;\n}\n\n[role=\"radio\"\
+  ] {\n  background: rgba(255,255,255,0.035) !important;\n}\n\n[role=\"radio\"][aria-checked=\"\
+  true\"],\n[role=\"tab\"][aria-selected=\"true\"] {\n  background: linear-gradient(135deg,\
+  \ #55c4ff, #18dfff) !important;\n  color: #061017 !important;\n  box-shadow: 0 12px\
+  \ 34px rgba(40,214,255,0.20) !important;\n}\n"

@@ -1,0 +1,8 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+
+# Local/generated scratch
+.tmp/
+node_modules/
